@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link href="recommendations.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <nav>
+                <ul>
+                    <li><a href="WhatITriedAndWhyIMovedOn.html">Home</a></li>
+                    <li class="active"><a href="recommendations.html">Recommendations</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="main-title">Personalized Recommendations</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Get Your Personalized Recommendation</h1>
+            <p>Tell me a bit about yourself, and I'll provide you with a personalized hobby or activity recommendation based on my experiences!</p>
+        </section>
+        <section class="form-section">
+            <h2>Submit Your Information</h2>
+            <form id="recommendation-form" action="submit_recommendation.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest" required>
+                    <option value="creative">Creative</option>
+                    <option value="musical">Musical</option>
+                    <option value="language">Language</option>
+                    <option value="sports">Sports</option>
+                    <option value="tech">Tech & Gaming</option>
+                    <option value="random">Random</option>
+                </select>
+
+                <label for="message">Tell me about your goals or preferences:</label>
+                <textarea id="message" name="message" placeholder="E.g., I love hands-on activities, or I want to learn a new skill." rows="5"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hobbies/Obsessions for Overthinkers</p>
+        <nav>
+            <a href="WhatITriedAndWhyIMovedOn.html">Home</a> |
+            <a href="recommendations.html">Recommendations</a>
+        </nav>
+    </footer>
+</body>
+</html>

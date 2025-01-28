@@ -1,0 +1,454 @@
+@charset "utf-8";
+
+/*
+	Hobbies Page Css code
+	Author: Daniela Montanez 
+	Date: 11/28/2024
+*/
+
+/* General Styles for Hobby Pages */
+body.hobby-page {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.main-title {
+	font-family:'Arial', sans-serif;
+	text-align: center;
+	font-size: 2.5em;
+	margin: 90px;
+	color: #004d40;
+	text-transform: uppercase;
+	
+}
+
+/* Top Bar (Navigation) */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #e0f7fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.topbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.topbar nav ul li {
+    display: inline;
+}
+
+.topbar nav ul li a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.topbar nav ul li a:hover {
+    background: #b2dfdb;
+}
+
+/* Banner */
+.banner{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.banner img{
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Page Title and Subtitle */
+.hero {
+    text-align: center;
+    background: #c8e6c9;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px; /* Keeps the section aligned with content */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #388e3c;
+}
+
+.hero p {
+    color: #6a6a6a;
+    font-size: 1.2rem;
+}
+
+/* Navigation Tabs */
+nav.tabs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+}
+
+nav.tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav.tabs li {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #b2ebf2;
+    color: #004d40;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav.tabs li:hover {
+    background-color: #80deea;
+    transform: translateY(-5px);
+}
+
+nav.tabs li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Highlight active tab */
+nav.tabs li.active {
+    background-color: #80deea;
+    color: #ffffff;
+}
+
+/* Content Layout */
+.main-content {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Article Styles */
+.content article {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.content article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content article h2 {
+    font-size: 1.5em;
+    color: #00796b;
+}
+
+.content article p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Two-Column Layout for Article */
+.two-column-layout {
+    display: flex;
+    gap: 20px; 
+    align-items: flex-start; 
+    margin: 20px 0;
+}
+
+/* Media Column (Image + Video) */
+.media-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+/* Info Column (Text Content) */
+.info-column {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    gap: 10px; 
+}
+
+/* Image Styling */
+.media-column img {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Video Thumbnail Styling */
+.video-thumbnail img {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.video-thumbnail figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Thumbnail Preview */
+.video-thumbnail {
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail img:hover {
+    transform: scale(1.05); 
+}
+
+.video-thumbnail figcaption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004d40;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+footer nav a {
+    color: #80deea;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Languages Grid Layout */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Language Card */
+.language-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.language-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.language-card h2 {
+    font-size: 1.2em;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.language-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Sports Grid Layout */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    margin: 20px 0;
+}
+
+.sports-grid article {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.sports-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.sports-grid h2 {
+    font-size: 1.2em;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.sports-grid p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* ------------------------------------------------
+   Responsive Design for Hobbies Pages
+------------------------------------------------ */
+
+/* Medium Screens (Laptops and Tablets - Width: 768px to 1024px) */
+@media (max-width: 1024px) {
+    nav.tabs ul {
+        flex-wrap: wrap;
+    }
+
+    nav.tabs li {
+        flex: 1 1 auto; 
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+
+    /* Media and Info Columns */
+    .two-column-layout {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .media-column, .info-column {
+        width: 100%; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .media-column img, .media-column iframe {
+        max-width: 90%; 
+        height: auto; 
+    }
+}
+
+/* Small Screens (Mobile Devices - Width: Below 768px) */
+@media (max-width: 768px) {
+    nav.tabs ul {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    nav.tabs li {
+        padding: 10px; 
+        margin: 5px 0; 
+    }
+
+    /* Content Adjustments */
+    .content {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        padding: 10px; 
+    }
+
+    /* Ratings Table */
+    .ratings-table table th, .ratings-table table td {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .ratings-table table {
+        width: 100%; 
+        font-size: 0.8em; 
+    }
+
+    /* Profile Image */
+    .profile-image {
+        width: 100px; 
+        height: 100px;
+    }
+}
+
+/* Extra Small Screens (Very Small Mobile Devices - Below 480px) */
+@media (max-width: 480px) {
+    /* Banner */
+    .banner img {
+        max-height: 200px;
+    }
+
+    /* Intro Section */
+    .intro {
+        padding: 15px; 
+    }
+
+    .intro h1 {
+        font-size: 1.5em; 
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8em;
+    }
+
+    footer nav a {
+        display: block; 
+        margin: 5px 0; 
+    }
+}
+
